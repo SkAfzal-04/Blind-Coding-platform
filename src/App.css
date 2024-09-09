@@ -1,0 +1,92 @@
+img{
+  height: 50px;
+  width: 50px;
+}
+.monaco-editor-blur {
+  position: relative;
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+  border-radius: 5px;
+  flex: 3; /* Takes 3 parts of the available space */
+}
+
+.monaco-editor {
+  border: 2px solid transparent;
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    border-color: #ffc107;
+  }
+  50% {
+    border-color: #17a2b8;
+  }
+  100% {
+    border-color: #ffc107;
+  }
+}
+
+.monaco-editor-blur .monaco-editor {
+  filter: blur(8px);
+  pointer-events: auto;
+}
+
+.editor-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  flex: 2; /* Takes 2 parts of the available space */
+}
+
+.Navbar-next {
+  display: flex;
+  justify-content: space-between; /* Ensures space between language select and switch */
+  align-items: center; /* Vertically center-aligns the elements */
+  margin-bottom: 20px;
+}
+.Navbar-next .switch-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns child elements to the right */
+  margin-bottom: 20px; /* Add some margin to separate from other elements */
+}
+
+.ButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px; /* Adjust the gap between buttons */
+  margin-top: 20px; 
+}
+
+.code-button,
+.close-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.code-button {
+  background-color: #007bff; /* Blue background for the Code button */
+  color: #ffffff; /* White text */
+}
+
+.code-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.close-button {
+  background-color: #dc3545; /* Red background for the Close button */
+  color: #ffffff; /* White text */
+}
+
+.close-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
